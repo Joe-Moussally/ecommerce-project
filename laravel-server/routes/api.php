@@ -18,13 +18,17 @@ Route::group(['middleware' => 'api'], function($router) {
 });
 
 //admin apis
-Route::post('/add_product',[ProductController::class, 'addProduct']);
-Route::post('/remove_product',[ProductController::class, 'removeProduct']);
-Route::post('/edit_quantity',[ProductController::class, 'editQuantity']);
-Route::post('/edit_name',[ProductController::class, 'editName']);
-Route::post('/edit_price',[ProductController::class, 'editPrice']);
-Route::post('/edit_picture',[ProductController::class, 'editPicture']);
-Route::post('/edit_category',[ProductController::class, 'editCategory']);
+Route::post('/add_product',[AdminController::class, 'addProduct']);
+Route::post('/remove_product',[AdminController::class, 'removeProduct']);
+Route::post('/edit_quantity',[AdminController::class, 'editQuantity']);
+Route::post('/edit_name',[AdminController::class, 'editName']);
+Route::post('/edit_price',[AdminController::class, 'editPrice']);
+Route::post('/edit_picture',[AdminController::class, 'editPicture']);
+Route::post('/edit_category',[AdminController::class, 'editCategory']);
+
+//product apis
+Route::post('/get_all_products',[ProductController::class, 'getAllProducts']);
+Route::post('/get_all_shoes',[ProductController::class, 'getAllShoes']);
 
 //category apis
 Route::post('/add_category',[CategoryController::class, 'addCategory']);

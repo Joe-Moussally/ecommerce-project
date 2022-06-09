@@ -42,4 +42,5 @@ class CategoryController extends Controller
             'status' => 'deleted'
         ],200);
     }
+    
 }
