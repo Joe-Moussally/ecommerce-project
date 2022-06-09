@@ -28,4 +28,17 @@ class ProductController extends Controller
             'product' => $product
         ],200);
     }
+
+    //remove a product
+    public function removeProduct(Request $Request) {
+
+        $product_id = $Request->id;
+
+        Product::find($product_id)->delete();
+
+        return response()->json([
+            'status' => 'deleted'
+        ],200);
+
+    }
 }

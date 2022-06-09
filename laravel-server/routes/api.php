@@ -36,3 +36,4 @@ Route::group(['middleware' => 'api'], function($router) {
 // });
 
 Route::post('/add_product',[ProductController::class, 'addProduct']);
+Route::post('/remove_product',[ProductController::class, 'removeProduct']);
