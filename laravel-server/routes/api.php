@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JWTController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\LikeController;
 
 
 //JWT apis
@@ -28,3 +29,7 @@ Route::post('/edit_category',[ProductController::class, 'editCategory']);
 //category apis
 Route::post('/add_category',[CategoryController::class, 'addCategory']);
 Route::post('/remove_category',[CategoryController::class, 'removeCategory']);
+
+//like apis
+Route::post('/add_like',[LikeController::class, 'addLike']);
+Route::post('/remove_like',[LikeController::class, 'removeLike']);
