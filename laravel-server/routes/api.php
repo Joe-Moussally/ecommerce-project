@@ -4,22 +4,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JWTController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
+//JWT apis
 Route::group(['middleware' => 'api'], function($router) {
     Route::post('/register', [JWTController::class, 'register']);
     Route::post('/login', [JWTController::class, 'login']);
@@ -28,13 +16,7 @@ Route::group(['middleware' => 'api'], function($router) {
     Route::post('/profile', [JWTController::class, 'profile']);
 });
 
-// Route::group(['prefix' => 'admin'], function(){
-//     Route::group(['middleware' => 'role.user'], function(){
-//         Route::get('/', [AdminController::class, 'getAllSalaries']);
-//         Route::get('/salaries', [AdminController::class, 'getAllSalaries']);
-//     });
-// });
-
+//admin apis
 Route::post('/add_product',[ProductController::class, 'addProduct']);
 Route::post('/remove_product',[ProductController::class, 'removeProduct']);
 Route::post('/edit_quantity',[ProductController::class, 'editQuantity']);
@@ -42,3 +24,7 @@ Route::post('/edit_name',[ProductController::class, 'editName']);
 Route::post('/edit_price',[ProductController::class, 'editPrice']);
 Route::post('/edit_picture',[ProductController::class, 'editPicture']);
 Route::post('/edit_category',[ProductController::class, 'editCategory']);
+
+//category apis
+Route::post('/add_category',[CategoryController::class, 'addCategory']);
+Route::post('/remove_category',[CategoryController::class, 'removeCategory']);
