@@ -110,5 +110,25 @@ class ProductController extends Controller
 
     }
 
+    //change product category
+    public function editCategory(Request $Request) {
+
+        //compare category strings with id
+        //---------------------------
+
+        $product_id = $Request->product_id;
+        $category_id = $Request->category_id;
+
+        $product = Product::find($product_id);
+        $product->category_id = $category_id;
+        $product->save();
+
+        return response()->json([
+            'status' => 'changed',
+            'new category' => $category_id
+        ],200);
+
+    }
+
     
 }

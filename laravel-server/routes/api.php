@@ -41,3 +41,4 @@ Route::post('/edit_quantity',[ProductController::class, 'editQuantity']);
 Route::post('/edit_name',[ProductController::class, 'editName']);
 Route::post('/edit_price',[ProductController::class, 'editPrice']);
 Route::post('/edit_picture',[ProductController::class, 'editPicture']);
+Route::post('/edit_category',[ProductController::class, 'editCategory']);
