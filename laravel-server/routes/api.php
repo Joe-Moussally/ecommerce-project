@@ -6,6 +6,8 @@ use App\Http\Controllers\JWTController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LikeController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 
 
 //JWT apis
@@ -27,8 +29,10 @@ Route::post('/edit_picture',[AdminController::class, 'editPicture']);
 Route::post('/edit_category',[AdminController::class, 'editCategory']);
 
 //product apis
-Route::post('/get_all_products',[ProductController::class, 'getAllProducts']);
+Route::post('/products/{id?}',[ProductController::class, 'getAllProducts']);
 Route::post('/get_all_shoes',[ProductController::class, 'getAllShoes']);
+Route::post('/get_all_tops',[ProductController::class, 'getAllTops']);
+Route::post('/get_all_pants',[ProductController::class, 'getAllPants']);
 
 //category apis
 Route::post('/add_category',[CategoryController::class, 'addCategory']);
@@ -37,3 +41,6 @@ Route::post('/remove_category',[CategoryController::class, 'removeCategory']);
 //like apis
 Route::post('/add_like',[LikeController::class, 'addLike']);
 Route::post('/remove_like',[LikeController::class, 'removeLike']);
+
+//user apis
+Route::post('/get_liked',[UserController::class, 'getLiked']);

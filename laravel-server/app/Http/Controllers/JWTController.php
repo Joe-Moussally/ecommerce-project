@@ -31,8 +31,6 @@ class JWTController extends Controller
             'name' => 'required|string|min:2|max:100',
             'email' => 'required|string|email|max:100|unique:users',
             'password' => 'required|string|confirmed|min:6',
-            'role' => '0',
-            'picture' => '',
         ]);
 
         if($validator->fails()) {
