@@ -21,9 +21,8 @@ loginButton.addEventListener('click', () => {
         console.log(Response.data)
         localStorage.setItem('token',Response.data.access_token);
         localStorage.setItem('user_id',Response.data.id.id);
+        window.location.replace('http://ecommerce-project/frontend-user/html/home.html')
     }).catch((err) => {
-        console.log(err)
-        console.log(statusDiv)
         statusDiv.innerHTML = 'wrong email/password'
         statusDiv.style.visibility = 'visible'
         password.value = ''
