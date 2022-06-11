@@ -19,6 +19,7 @@ loginButton.addEventListener('click', () => {
         data: data
     }).then((Response) => {
         console.log(Response.data)
+        localStorage.setItem('token',Response.data.access_token);
     }).catch((err) => {
         console.log(err)
         console.log(statusDiv)
