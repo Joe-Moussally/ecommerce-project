@@ -162,6 +162,7 @@ h1 {
 
 /*NAVBAR*/
 nav {
+    z-index: 1;
     position: fixed;
     top: 0;
     width: 100%;
@@ -174,8 +175,8 @@ nav {
 }
 
 .profile-picture {
-    width: 60px;
-    height: 60px;
+    width: 57px;
+    height: 57px;
     border-radius: 50%;
     border: 2px rgb(0, 0, 0) solid;
     object-fit: cover;
@@ -184,14 +185,15 @@ nav {
 
 #nav-icons-container {
     display: flex;
-    width: 220px;
-    justify-content: space-between;
+    width: 580px;
+    justify-content: space-evenly;
     align-items: center;
     color: white;
 }
 
 #nav-icons-container span {
     font-size: 29px;
+    margin: 0 5px;
 }
 #nav-icons-container span:hover{
     cursor:default;
@@ -208,4 +210,71 @@ nav {
 #nav-icons-container button:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+#shoes {
+    margin-right: 100px;
+    margin-left: 10px;
+}
+#pants {
+    margin: 0 10px;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+/*HOME CARDS CONTAINER*/
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#cards-container li {
+    width: 250px;
+    height: 310px;
+    border: 1px rgba(128, 128, 128, 0.599) solid;
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px 30px 15px;
+    transition: .3s;
+}
+
+#cards-container li:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.193);
+    transition: .3s;
+}
+
+#cards-container li img {
+    border-bottom: .75px rgb(0, 0, 0) solid;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body { 
+    padding: 5px;
+}
+
+#home-body-container {
+    padding: 50px;
+}
+#home-body {
+    padding-top: 90px;
+    color: black;
+}
+#home-title {
+    color:black;
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:712px) {
+    #cards-container li {
+        width: 340px;
+        height: 310px;
+    }
 }
