@@ -245,8 +245,7 @@ nav {
 
 #cards-container li:hover {
     cursor: pointer;
-    transform: scale(1.05);
-    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.193);
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.11);
     transition: .3s;
 }
 
@@ -256,8 +255,13 @@ nav {
     object-fit: cover;
 }
 
+#cards-container li span {
+    width: 100%;
+}
+
 .card-body { 
     padding: 5px;
+    background-color: rgb(253, 253, 253);
 }
 
 #home-body-container {
@@ -285,4 +289,23 @@ nav {
     #brand {
         font-size: 30px;
     }
+}
+
+.card-footer {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.like {
+    border: none;
+    background: none;
+    margin-left: auto;
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+.like:hover {
+    cursor: pointer;
+    color: rgb(165, 0, 82);
 }

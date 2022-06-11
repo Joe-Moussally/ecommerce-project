@@ -27,7 +27,9 @@ axios({
         '<img src="'+product.picture+'">'+
         '<div class="card-body">'+
         '<h2 class="card-title">'+product.name+'</h2>'+
+        '<div class="card-footer">'+
         '<span>'+product.price+'$</span>'+
-        '</div></li>'
+        '<button class="like"><i class="fa-regular fa-heart"></i></button>'+
+        '</div>'
     })
 })
