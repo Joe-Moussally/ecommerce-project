@@ -21,7 +21,7 @@ loginButton.addEventListener('click', () => {
         console.log(Response.data)
         localStorage.setItem('token',Response.data.access_token);
         localStorage.setItem('user_id',Response.data.id.id);
-        window.location.replace('http://ecommerce-project/frontend-user/html/home.html')
+        window.location.replace('./home.html')
     }).catch((err) => {
         statusDiv.innerHTML = 'wrong email/password'
         statusDiv.style.visibility = 'visible'
@@ -32,5 +32,5 @@ loginButton.addEventListener('click', () => {
 
 //adding event listener to redirect to signup
 signUpButton.addEventListener('click', () => {
-    window.location.replace('http://ecommerce-project/frontend-user/html/signup.html')
+    window.location.replace('./signup.html')
 })
