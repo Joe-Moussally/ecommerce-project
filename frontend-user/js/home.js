@@ -13,3 +13,21 @@ if (user_id == null || user_id == 0) {
 //     reader.onload = () => resolve(reader.result);
 //     reader.onerror = error => reject(error);
 // });
+
+//populating home section
+let ul = document.getElementById('cards-container');
+
+axios({
+    method:'POST',
+    url: 'http://127.0.0.1:8000/api/products'
+}).then((Response) => {
+    console.log(Response.data.products);
+    Response.data.products.forEach((product) => {
+        ul.innerHTML += '<li id="'+product.id+'">'+
+        '<img src="'+product.picture+'">'+
+        '<div class="card-body">'+
+        '<h2 class="card-title">'+product.name+'</h2>'+
+        '<span>'+product.price+'$</span>'+
+        '</div></li>'
+    })
+})

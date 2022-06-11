@@ -234,7 +234,7 @@ nav {
 
 #cards-container li {
     width: 250px;
-    height: 310px;
+    height: fit-content;
     border: 1px rgba(128, 128, 128, 0.599) solid;
     display: flex;
     flex-direction: column;
