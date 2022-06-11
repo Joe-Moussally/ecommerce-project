@@ -6,6 +6,7 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const path = require("path");
 const url = require("url");
+const Menu = electron.Menu;
 
 let win;
 
@@ -25,12 +26,15 @@ function createWindow() {
     //for debugging----------
     win.webContents.openDevTools();
     //-----------------------
+
     win.on('closed', () => {
         win = null;
     })
 }
 
-app.on('ready', createWindow);
+app.on('ready', () => {
+    createWindow();
+});
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
