@@ -23,7 +23,7 @@ axios({
 }).then((Response) => {
     console.log(Response.data.products);
     Response.data.products.forEach((product) => {
-        ul.innerHTML += '<li id="'+product.id+'">'+
+        ul.innerHTML += '<li id="'+product.id+'" onclick="getInfo(event.currentTarget)">'+
         '<img src="'+product.picture+'">'+
         '<div class="card-body">'+
         '<h2 class="card-title">'+product.name+'</h2>'+
@@ -33,3 +33,8 @@ axios({
         '</div>'
     })
 })
+
+const getInfo = (li) => {
+    localStorage.setItem('product_id',li.id);
+    window.location.replace('./product.html')
+}
