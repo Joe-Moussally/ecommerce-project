@@ -20,13 +20,15 @@ Route::group(['middleware' => 'api'], function($router) {
 });
 
 //admin apis
-Route::post('/add_product',[AdminController::class, 'addProduct']);
-Route::post('/remove_product',[AdminController::class, 'removeProduct']);
-Route::post('/edit_quantity',[AdminController::class, 'editQuantity']);
-Route::post('/edit_name',[AdminController::class, 'editName']);
-Route::post('/edit_price',[AdminController::class, 'editPrice']);
-Route::post('/edit_picture',[AdminController::class, 'editPicture']);
-Route::post('/edit_category',[AdminController::class, 'editCategory']);
+Route::group(['middleware' => 'role.admin'], function() {
+    Route::post('/add_product',[AdminController::class, 'addProduct']);
+    Route::post('/remove_product',[AdminController::class, 'removeProduct']);
+    Route::post('/edit_quantity',[AdminController::class, 'editQuantity']);
+    Route::post('/edit_name',[AdminController::class, 'editName']);
+    Route::post('/edit_price',[AdminController::class, 'editPrice']);
+    Route::post('/edit_picture',[AdminController::class, 'editPicture']);
+    Route::post('/edit_category',[AdminController::class, 'editCategory']);
+});
 
 //product apis
 Route::post('/products/{id?}',[ProductController::class, 'getAllProducts']);

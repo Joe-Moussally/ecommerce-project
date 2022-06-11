@@ -42,19 +42,19 @@ class ProductController extends Controller
     //get all shoes tops
     public function getAllTops() {
 
-        $shoes = Product::where('category_id',2)->get();
+        $tops = Product::where('category_id',2)->get();
 
         return response()->json([
             'status' => 'success',
-            'products' => $shoes
+            'products' => $tops
         ],200);
     }
 
     //get all shoes tops
     public function getAllPants() {
-
+        
         $shoes = Product::where('category_id',3)->get();
-
+        
         return response()->json([
             'status' => 'success',
             'products' => $shoes
