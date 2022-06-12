@@ -17,7 +17,7 @@ loginButton.addEventListener('click', () => {
         url: 'http://127.0.0.1:8000/api/login',
         data: data
     }).then((Response) => {
-        console.log(Response.data.role.role)
+        console.log(Response.data)
         let role = Response.data.role.role;
         if (role == 0) {
             statusDiv.innerHTML = 'Admins Only'

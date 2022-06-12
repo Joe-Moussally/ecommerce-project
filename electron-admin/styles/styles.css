@@ -109,6 +109,7 @@ h1 {
     color: white;
     font-weight: 700;
     font-size: 22px;
+    transition: .27s;
 }
 
 #signup-btn {
@@ -216,4 +217,11 @@ h1 {
     transition: .27s;
     outline: 2px rgba(0, 0, 0, 0.181) solid;
     border-radius: 0px;
+}
+
+#submit:hover {
+    border: 2px black solid;
+    background-color: white;
+    color: black;
+    transition: .27s;
 }
