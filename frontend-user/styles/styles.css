@@ -321,6 +321,7 @@ nav {
     display: flex;
     margin-left: 10px;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 #product-name {
@@ -332,7 +333,7 @@ nav {
 
 #product-img {
     width: 50%;
-    min-width: 350px;
+    min-width: 500px;
     max-width: 600px;
     object-fit: cover;
     margin: 10px;
@@ -343,10 +344,10 @@ nav {
 #product-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-left: 30px;
     margin-top: 50px;
-    height: 200px;
+    height: 500px;
 }
 
 #product-info div {
