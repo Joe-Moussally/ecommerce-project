@@ -190,3 +190,30 @@ h1 {
     text-decoration: underline;
     cursor: pointer;
 }
+
+/*ADD PRODUCT*/
+.form-section {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-bottom: 40px;
+}
+
+.label {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 7px 7px 7px 0px;
+}
+
+.input {
+    height: 30px;
+    padding: 5px;
+    border: 1px rgba(0, 0, 0, 0.401) solid;
+    transition: .27s;
+}
+
+.input:focus {
+    transition: .27s;
+    outline: 2px rgba(0, 0, 0, 0.181) solid;
+    border-radius: 0px;
+}

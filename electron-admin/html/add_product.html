@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Admin Panel</title>
+</head>
+<body id="admin-home-body">
+    <h1 class="black-title" style="padding: 50px;">Add Product</h1>
+    <div id="home-container">
+        <div id="add-body">
+
+            <div class="form-section">
+                <label for="name" class="label">Product Name</label>
+                <input type="text" name="name" class="input">
+            </div>
+
+            <div class="form-section">
+                <label for="price" class="label">Price (in $)</label>
+                <input type="number" id="quantity" name="price" min="1" class="input">
+            </div>
+
+            <div class="form-section">
+                <label for="category" class="label">Category</label>
+                <select name="category" class="input">
+                    <option value="Tops">Tops</option>
+                    <option value="Pants">Pants</option>
+                    <option value="Shoes">Shoes</option>
+                </select>
+            </div>
+
+            <div class="form-section">
+                <label for="quantity" class="label">Quantity in stock</label>
+                <input type="number" id="quantity" name="quantity" min="1" class="input">
+            </div>
+
+            <div class="form-section">
+                <label for="img" class="label">Product photo</label>
+                <input type="file" id="img" name="img" accept="image/*">
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
