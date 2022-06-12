@@ -1,5 +1,3 @@
-console.log("HERE");
-
 const { create } = require("domain");
 const electron = require("electron");
 const app = electron.app;
