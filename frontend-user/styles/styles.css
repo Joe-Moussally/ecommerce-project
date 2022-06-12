@@ -121,7 +121,7 @@ h1 {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    margin-top: -40px;
+    margin-top: -10px;
 }
 #new-user span {
     margin-bottom: 20px;
