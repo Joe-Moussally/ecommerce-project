@@ -132,3 +132,61 @@ h1 {
 #login-title {
     text-align: center;
 }
+
+
+/*HOME PAGE*/
+#admin-home-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.black-title {
+    color: black;
+    font-size: 64px;
+}
+
+#menu-body {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.menu-card {
+    width: 300px;
+    height: 70px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    transition: .27s;
+}
+
+.menu-card:hover {
+    transition: .27s;
+    border: 3px black solid;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+#admin-logout {
+    color: rgb(181, 0, 36);
+}
+
+#admin-logout:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
