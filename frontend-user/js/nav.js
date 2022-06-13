@@ -56,3 +56,23 @@ document.getElementById('brand').addEventListener('click', () => {
 document.getElementById('all').addEventListener('click', () => {
     window.location.replace('./home.html')
 })
+
+//go to shoes
+document.getElementById('shoes').addEventListener('click', ()=>{
+    window.location.replace('./shoes.html')
+})
+
+//go to pants
+document.getElementById('pants').addEventListener('click', ()=>{
+    window.location.replace('./pants.html')
+})
+
+//go to tops
+document.getElementById('tops').addEventListener('click', ()=>{
+    window.location.replace('./tops.html')
+})
+
+//go to profile
+document.getElementById('profile-nav').addEventListener('click', () => {
+    window.location.replace('./profile.html')
+})
