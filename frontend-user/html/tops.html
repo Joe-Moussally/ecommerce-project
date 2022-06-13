@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <link rel="stylesheet" href="../styles/styles.css">
-    <title>Product</title>
+    <title>Home</title>
 </head>
 
 <nav>
     <h1 id="brand">OVERARMOR</h1>
     <div id="nav-icons-container">
-        <button id="all" class="active">Latest</button>
-        <button id="tops">Tops</button>
+        <button id="all">Latest</button>
+        <button id="tops" class="active">Tops</button>
         <button id="pants">Pants</button>
         <button id="shoes">Shoes</button>
         <button id="login-nav">Log In</button>
@@ -24,24 +25,31 @@
     </div>
 </nav>
 
-<body id="product-body">
-    <h1 id="product-name">Adidas 33</h1>
+<body id="home-body">
 
-    <div id="product-body-container">
-        <div id="product-body-container">
-            <!-- <img src="https://m.media-amazon.com/images/I/716ro6BnNIL._UL1500_.jpg" id="product-img">
-            <div id="product-info">
-                <div><strong>Category:</strong>&nbsp&nbspShoes</div>
-                <div id="product-price"><strong>Price:</strong>&nbsp&nbsp99$</div>
-                <div><strong>Quantity:</strong>&nbsp&nbsp20 in stock</div>
-                <div id="add-like"><strong>Add to favorites&nbsp&nbsp</strong><i class="fa-regular fa-heart"></i></div>
-            </div> -->
-        </div>
+    <div id="home-body-container">
+        <h1 id="home-title">Our Latest Additions</h1>
 
+        <ul id="cards-container" class="container">
+<!-- 
+            <li>
+                <img src="https://m.media-amazon.com/images/I/716ro6BnNIL._UL1500_.jpg">
+                <div class="card-body">
+                    <h2 class="card-title">Adidas 33</h2>
+                    <div class="card-footer">
+                        <span>49$</span>
+                        <button class="like"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    
+                </div>
+            </li> -->
+
+        </ul>
     </div>
+
 </body>
 </html>
 
+<script src="../js/tops.js"></script>
 <script src="../js/nav.js"></script>
-<script src="../js/product.js"></script>
 <script src="https://kit.fontawesome.com/559b0c66a2.js" crossorigin="anonymous"></script>

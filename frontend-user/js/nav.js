@@ -45,3 +45,14 @@ document.getElementById('logout-nav').addEventListener('click', () => {
         window.location.replace('./home.html')
     })
 })
+
+//add return to home to logo click
+document.getElementById('brand').addEventListener('click', () => {
+    window.location.replace('./home.html')
+    console.log("CLLICKED")
+})
+
+//adding event listeners to latest button
+document.getElementById('all').addEventListener('click', () => {
+    window.location.replace('./home.html')
+})

@@ -281,6 +281,10 @@ nav {
     margin-bottom: 20px;
 }
 
+#brand:hover {
+    cursor: pointer;
+}
+
 @media screen and (max-width:710px) {
 
     #cards-container li {
