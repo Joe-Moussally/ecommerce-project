@@ -225,3 +225,11 @@ h1 {
     color: black;
     transition: .27s;
 }
+
+#back {
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.67);
+    background-color: white;
+    transform: translateY(-10px);
+    font-size: 32px;
+}

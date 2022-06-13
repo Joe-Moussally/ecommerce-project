@@ -43,3 +43,8 @@ submit.addEventListener('click', () => {
         })
     })
 })
+
+//redirect back to home
+document.getElementById('back').addEventListener('click', () => {
+    window.location.replace('./home.html')
+})
